@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Juneate`,
+    title: ``,
     author: {
-      name: `Rocco Panacci`,
+      name: `Katherine Blasman`,
       summary: `builder of things.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `roccop`
+      twitter: ``
     },
   },
   plugins: [
