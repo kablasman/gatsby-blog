@@ -44,7 +44,7 @@ const BlogIndex = ({ data, location }) => {
         return (
           <article key={post.fields.slug} className="index-story" itemScope itemType="http://schema.org/Article">
             <header className="index-story-summary">
-              <div className="category">Category</div>
+              <div className="category">visual arts</div>
               <h1>
                 <Link to={post.fields.slug} itemProp="url">
                   <span itemProp="headline">{title}</span>
@@ -57,13 +57,12 @@ const BlogIndex = ({ data, location }) => {
                 }}
                 itemProp="description"
               />
-              <Link to={post.fields.slug} itemProp="url">[ Keep reading ]</Link>
+              <Link to={post.fields.slug} itemProp="url">Continue...</Link>
             </header>
             <div className="index-story-img">
               <Link to={post.fields.slug} itemProp="url">
                 <img src={
-                  post.frontmatter.image ||
-                    "https://images.unsplash.com/photo-1560472962-4388d184d933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
+                  post.frontmatter.image
                  } alt="" />
               </Link>
             </div>
