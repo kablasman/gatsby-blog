@@ -21,13 +21,13 @@ const Layout = ({ location, children }) => {
 
   return (
     <div className="layout" data-is-root-path={isRootPath}>
-      <header className="site-header container">
+      <header className="site-header">
         <div className="logo"><Link to="/">graffiti.io</Link></div>
       </header>
       <main className="site-main container">{children}</main>
       <footer className="site-footer">
         <div className="container">
-          <p class="copyright">Copyright © {new Date().getFullYear()}</p>
+          <p class="copyright">© Copyright, {new Date().getFullYear()}.</p>
           {/* <ul>
             <li><a href={`http://twitter.com/${twitter}`}>{`@${twitter}`}</a></li>
           </ul> */}

@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900,900i|Open+Sans:600,700,800|Lato:400,700|IBM+Plex+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 :root {
-  --ffam-serif-a: 'IBM Plex Serif', georgia, serif;
-  --ffam-serif-b: 'Playfair Display', georgia, serif;
-  --ffam-sans-a: 'Open Sans', 'Lato', helvetica, arial, sans-serif;
+  --ffam-serif-a: 'Urbanist', sans-serif;
+  --ffam-serif-b: 'Pacifico', cursive;
+  --ffam-sans-a: 'Urbanist', sans-serif;
   --txt-line: 1.4;
   --txt-vrt: 2rem;
   --txt-hrz: 1rem;
@@ -11,7 +12,7 @@
   --h-margin: calc(var(--txt-line) / var(--h-line) * 1rem);
   --corners: calc(var(--txt-vrt) / 8);  
   
-  --col-back: #ffffff;
+  --col-back: #fef8f4	;
   --col-fore: #222222;
   
   --a-h: 152;
@@ -27,26 +28,42 @@
   --dark: 50%;
   --darker: 50%;
   
-  --col-a-lighter: hsla(var(--a-h), 100%, var(--lighter), var(--opaque));
-  --col-a-light: hsla(var(--a-h), 100%, var(--light), var(--opaque));
-  --col-a: hsla(var(--a-h), 100%, var(--mid), var(--opaque));
-  --col-a-dark: hsla(var(--a-h), 95%, var(--dark), var(--opaque));
-  --col-a-darker: hsla(var(--a-h), 70%, var(--darker), var(--opaque));
+  --col-a-lighter:#FFC2B6;
+  --col-a-light: #FFC2B6;
+  --col-a: #FF9A86;
+  --col-a-dark: #FFC2B6;
+  --col-a-darker: #FFC2B6;
   
-  --col-b: hsla(var(--a-h), 20%, 20%, var(--opaque));
+  --col-b: #FFC2B6;
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
   transition: all 100ms;
 }
+
 body {
   margin: 0;
   font: 400 1em var(--ffam-serif-a);
   line-height: 1;
-  background-color: var(--col-back);
-  color: var(--col-fore);
+  background-color: var(--col-a-lighter);
 }
+
+img[alt='UK graffiti'] { 
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+img[alt='French graffiti'] { 
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+img[alt='Toronto graffiti'] { 
+  border-radius: 50%;
+  background-color: transparent;
+}
+
 button, input, textarea {
   color: inherit;
   background-color: inherit;
@@ -78,6 +95,7 @@ h1 > a:hover {
   background-image: linear-gradient(transparent 0, transparent 65%, hsla(var(--a-h), 100%, var(--mid), var(--lucent)) 65%);
   box-shadow: none;
 }
+
 .category + h1 {
   margin-top: calc(var(--h-margin) / 1.5);
 }
@@ -130,10 +148,11 @@ a {
   font-size: 0.95em;
   box-shadow: 0.2rem 0.2rem 0 transparent;
 }
-a:hover {
-  background-color: var(--col-a-lighter);
-  box-shadow: 0.2rem 0.2rem 0 var(--col-a);  
-}
+/* a:hover {
+  background-color: var(--col-back);
+  border-radius: 1em;
+} */
+
 p a:hover::before {
   width: 100%;
 }
@@ -338,19 +357,42 @@ button {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url(./images/marjan-blan-marjanblan-_kUxT8WkoeY-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  color: var(--col-fore);
+  background-repeat: no-repeat;
+  background-color: var(--col-back);
+  background-blend-mode: multiply;
+}
+
+.index-story-img img {
+  border-radius: 70%;
 }
 
 .site-header {
   margin-bottom: calc(var(--txt-vrt) * 2);
+  color: var(--col-a);
+  background: linear-gradient(90deg, var(--col-a) 0%, var(--col-a-light) 100%);
+  background-image: url(./images/marjan-blan-marjanblan-_kUxT8WkoeY-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--col-a);
+  background-blend-mode: multiply;
+  width: 100vw;
+  margin: 0;
+  margin-bottom: 3em;
 }
+
 .site-main {
   flex-grow: 1;
+  padding: 2em;
 }
 .site-footer {
   /*   background-color: var(--col-accent); */
   color: var(--col-b);
   padding: calc(var(--txt-vrt) * 3) 0;
-  margin-top: calc(var(--txt-vrt) * 3);
+  margin-top: calc(var(--txt-vrt) * 1.5);
   position: relative;
   overflow: hidden;
   z-index: 0;
@@ -358,8 +400,12 @@ button {
 }
 .site-footer::before {
   content: "";
-  background-color: var(--col-a);
   background: linear-gradient(90deg, var(--col-a) 0%, var(--col-a-light) 100%);
+  background-image: url(./images/marjan-blan-marjanblan-_kUxT8WkoeY-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--col-a);
+  background-blend-mode: multiply;
   /*   background: linear-gradient(90deg, rgba(209,50,81,1) 0%, rgba(230,98,95,1) 100%); */
   position: absolute;
   height: 100%;
@@ -372,6 +418,10 @@ button {
 }
 .site-footer::after {
   content: "";
+  background-image: url(./images/marjan-blan-marjanblan-_kUxT8WkoeY-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
   background-color: var(--col-a-lighter);  
   position: absolute;
   height: 100%;
@@ -385,19 +435,24 @@ button {
   
 .logo a {
   display: block;
-  font: 800 3em 'Open Sans', Helvetica, sans-serif;
-  text-transform: uppercase;
+  font: 3em 'Urbanist', sans-serif;
   letter-spacing: -0.1em;
   line-height: 0.45;
-  border-bottom: 0.15em solid var(--col-a);
-  margin: 0.5em 0;
-  padding-left: 0.08em;
+  margin: 0.7em 0;
+  padding-left: 0.3em;
 }
 
 .container {
   width: 90%;
   max-width: 50em;
   margin: auto;
+}
+
+.copyright {
+  font-size: 0.5em;
+  text-align: center;
+  margin-top: 1em;
+  color: black;
 }
 
 .published, .category {
@@ -412,7 +467,7 @@ button {
   margin-top: 0;
 }
 .category {
-  background-color: var(--col-a);
+  background-color: var(--col-a-darker);
   display: inline-block;
   padding: 0.25em;
   font-size: 0.5em;
@@ -436,12 +491,14 @@ button {
 .index-story {
   gap: 2em;
   align-items: center;
-  border-bottom: 2px solid lightgrey;
+  /* border-bottom: 2px solid black; */
   padding: 2em 0;
 }
+
 .index-story h1 {
   margin-right: 0;
 }
+
 .index-story-summary h1:first-child {
   margin-top: 0;
 }
@@ -498,8 +555,9 @@ button {
   display: grid;
   align-content: end;
   padding: 1em;
+  border-radius: 70%;
 }
 .header-img * {
   color: white;
-  mix-blend-mode: difference;
+
 }
