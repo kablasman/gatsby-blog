@@ -370,6 +370,8 @@ button {
   border-radius: 70%;
 }
 
+
+
 .site-header {
   margin-bottom: calc(var(--txt-vrt) * 2);
   color: var(--col-a);
@@ -381,18 +383,44 @@ button {
   background-blend-mode: multiply;
   width: 100vw;
   margin: 0;
-  margin-bottom: 3em;
+  padding-bottom: -1em;
+  margin-bottom: 0.6em;
+}
+
+.banner img {
+  width: 50%;
+  border: none;
+  box-shadow: none;
+  z-index: 9999;
+}
+
+.lowerBanner img {
+  width: 50%;
+  border: none;
+  box-shadow: none;
+  z-index: 9999;
+}
+
+.banner {
+  text-align: center;
+  margin-top: 0.6em;
+}
+
+.lowerBanner {
+  text-align: center;
 }
 
 .site-main {
   flex-grow: 1;
   padding: 2em;
+  padding-top: 0;
+  padding-bottom: 0;
 }
+
 .site-footer {
   /*   background-color: var(--col-accent); */
   color: var(--col-b);
   padding: calc(var(--txt-vrt) * 3) 0;
-  margin-top: calc(var(--txt-vrt) * 1.5);
   position: relative;
   overflow: hidden;
   z-index: 0;
@@ -432,6 +460,11 @@ button {
   z-index: -2;
   transform: rotate(-2deg);
 }
+
+.logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
   
 .logo a {
   display: block;
@@ -440,6 +473,17 @@ button {
   line-height: 0.45;
   margin: 0.7em 0;
   padding-left: 0.3em;
+  color: var(--col-a-lighter)
+}
+
+.github {
+  padding-right: 0.5em;
+}
+
+.github img {
+  box-shadow: none;
+  color: var(--col-a-lighter);
+  float: right;
 }
 
 .container {
@@ -449,10 +493,10 @@ button {
 }
 
 .copyright {
-  font-size: 0.5em;
+  font-size: 0.7em;
   text-align: center;
   margin-top: 1em;
-  color: black;
+  color:var(--col-a-lighter);
 }
 
 .published, .category {
@@ -479,6 +523,13 @@ button {
   body {
     font-size: 1.20em;
   }
+
+  .index-story {
+    gap: 2em;
+    align-items: center;
+    /* border-bottom: 2px solid black; */
+    padding: 2em 0;
+  }
 }
 @media screen and (min-width: 60em) {
   body {
@@ -492,7 +543,7 @@ button {
   gap: 2em;
   align-items: center;
   /* border-bottom: 2px solid black; */
-  padding: 2em 0;
+  padding: 1em 0;
 }
 
 .index-story h1 {
@@ -534,6 +585,10 @@ button {
 /*********** story.css ***********/
 .story-header {
   margin-bottom: 3rem;
+}
+
+.story-body {
+  padding-top: 1em;
 }
 .story-body > p:first-of-type {
   text-indent: 1em;
